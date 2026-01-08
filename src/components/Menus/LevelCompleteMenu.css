@@ -1,0 +1,223 @@
+.level-complete-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.level-complete-headline {
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 20px 0;
+  text-shadow: 0 4px 20px rgba(16, 185, 129, 0.5);
+  animation: celebrate 0.6s ease-out;
+}
+
+@keyframes celebrate {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.level-complete-score {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  border-radius: 16px;
+  padding: 30px 40px;
+  margin: 20px 0;
+  min-width: 280px;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+}
+
+.score-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #94a3b8;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.score-value {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.level-complete-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.menu-button {
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.menu-button:hover::before {
+  left: 100%;
+}
+
+.next-level-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+}
+
+.next-level-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
+}
+
+.main-menu-button {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  color: #ffffff;
+}
+
+.main-menu-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(100, 116, 139, 0.5);
+}
+
+.menu-button:active {
+  transform: translateY(0) scale(1);
+}
+
+/* Responsive styles */
+@media (min-width: 500px) {
+  .level-complete-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: none;
+  }
+
+  .menu-button {
+    flex: 1;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .level-complete-headline {
+    font-size: 38px;
+    letter-spacing: 3px;
+  }
+
+  .level-complete-score {
+    padding: 25px 30px;
+    min-width: 240px;
+  }
+
+  .score-value {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  .menu-button {
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+
+  .level-complete-buttons {
+    gap: 12px;
+  }
+}
+
+@media (max-height: 650px) {
+  .level-complete-headline {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .level-complete-score {
+    padding: 20px 30px;
+    margin: 15px 0;
+  }
+
+  .score-value {
+    font-size: 36px;
+  }
+
+  .score-label {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .level-complete-buttons {
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .menu-button {
+    padding: 12px 32px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .level-complete-headline {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .level-complete-score {
+    padding: 18px 25px;
+    min-width: 200px;
+  }
+
+  .score-value {
+    font-size: 32px;
+  }
+
+  .menu-button {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,144 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  position: relative;
+}
+
+.top-bar-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 140px;
+}
+
+.top-bar-side:first-child {
+  justify-content: flex-start;
+}
+
+.top-bar-side:last-child {
+  justify-content: flex-end;
+}
+
+.top-bar-label {
+  color: #94a3b8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.top-bar-value {
+  color: #f1f5f9;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.top-bar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar-level {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #f1f5f9;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(102, 126, 234, 0.5);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .top-bar {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-bar {
+    padding: 12px 15px;
+  }
+
+  .top-bar-side {
+    font-size: 16px;
+    min-width: 100px;
+    gap: 6px;
+  }
+
+  .top-bar-label {
+    font-size: 12px;
+  }
+
+  .top-bar-value {
+    font-size: 18px;
+  }
+
+  .top-bar-level {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-height: 650px) {
+  .top-bar {
+    padding: 10px 15px;
+  }
+
+  .top-bar-side {
+    font-size: 14px;
+    min-width: 90px;
+  }
+
+  .top-bar-label {
+    font-size: 11px;
+  }
+
+  .top-bar-value {
+    font-size: 16px;
+  }
+
+  .top-bar-level {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .top-bar {
+    padding: 8px 10px;
+  }
+
+  .top-bar-side {
+    font-size: 12px;
+    min-width: 80px;
+    gap: 4px;
+  }
+
+  .top-bar-label {
+    font-size: 10px;
+  }
+
+  .top-bar-value {
+    font-size: 14px;
+  }
+
+  .top-bar-level {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
